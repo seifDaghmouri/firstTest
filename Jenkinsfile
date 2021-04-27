@@ -1,10 +1,10 @@
 pipeline {
     agent any 
-    stages {
+   /* stages {
         stage('Git checkout') {
             steps {
                checkout scm
-            }
+            }*/
             
         stage('Odoo cmd') {
             steps {
@@ -14,5 +14,5 @@ pipeline {
             }
         }
     }
-}
-}
+//}
+//}
