@@ -9,7 +9,7 @@ pipeline {
         stage('Odoo cmd') {
             steps {
                 //def cmd ="sudo service odoo-server restart"
-                sh 'sudo service postgresql  restart'
+                sh 'service postgresql restart'
                 echo 'success'
                 sh 'service odoo-server restart'
                 echo 'success'
