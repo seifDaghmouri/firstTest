@@ -5,8 +5,15 @@ pipeline {
             steps {
                checkout scm
             }*/
-            
-        stage('Odoo cmd') {
+
+        stage('BD restart') {
+            steps {
+                //def cmd ="sudo service odoo-server restart"
+                sh 'service postgresql restart'
+                echo 'success'
+            }
+
+        stage('Odoo restart') {
             steps {
                 //def cmd ="sudo service odoo-server restart"
                 sh 'service odoo-server restart'
