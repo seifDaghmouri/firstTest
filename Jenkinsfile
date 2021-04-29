@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Odoo restart') {
             steps {
-                sh 'service odoo-server restart'
+                sh 'sudo service odoo-server restart'
                 echo 'success'
 
             }
